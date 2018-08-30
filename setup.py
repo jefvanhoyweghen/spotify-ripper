@@ -20,7 +20,7 @@ def _read(fn):
 
 setup(
     name='spotify-ripper',
-    version='2.11.2',
+    version='2.11.3',
     packages=find_packages(exclude=["tests"]),
     scripts=['spotify_ripper/main.py'],
     include_package_data=True,
@@ -49,14 +49,14 @@ setup(
     ],
 
     # Metadata
-    author='James Newell',
-    author_email='james.newell@gmail.com',
+    author='Jef Van Hoyweghen',
+    author_email='jef@vanhoyweghen.net',
     description='a small ripper for Spotify that rips Spotify URIs '
-                'to audio files',
+                'to audio files, fork from https://github.com/jrnewell/spotify-ripper',
     license='MIT',
     keywords="spotify ripper mp3 ogg vorbis flac opus acc mp4 m4a",
     url='https://github.com/jefvanhoyweghen/spotify-ripper',
-    download_url='https://github.com/jefvanhoyweghen/spotify-ripper/tarball/2.11.2',
+    download_url='https://github.com/jefvanhoyweghen/spotify-ripper/tarball/2.11.3',
     classifiers=[
         'Topic :: Multimedia :: Sound/Audio',
         'Topic :: Multimedia :: Sound/Audio :: Capture/Recording',
