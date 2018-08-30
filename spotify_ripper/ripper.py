@@ -363,7 +363,7 @@ class Ripper(threading.Thread):
             self.post.create_playlist_wpl(tracks)
 
             # actually removing the tracks from playlist
-            # self.post.remove_tracks_from_playlist()
+            #self.post.remove_tracks_from_playlist()
 
             # remove libspotify's offline storage cache
             self.post.remove_offline_cache()
@@ -429,8 +429,7 @@ class Ripper(threading.Thread):
         elif link.type == spotify.LinkType.PLAYLIST:
             print('get playlist tracks')
             self.playlist_uri = uri
-            tracks = get_playlist_tracks(self.session.user.canonical_name, uri)
-            track_list = tracks.get('items')
+            track_list = get_playlist_tracks(self.session.user.canonical_name, uri)
             for n in track_list:
                 thisTrack = n.get('track')
                 thisTrackuri = thisTrack.get('uri')
