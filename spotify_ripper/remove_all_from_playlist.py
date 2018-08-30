@@ -43,7 +43,7 @@ def get_playlist_tracks(username, playlistURI):
 
     print('Getting Results')
     while next != None:
-        results = spotInstance.user_playlist_tracks(username, rPlaylistID, fields="tracks,total,next", 100, offset)
+        results = spotInstance.user_playlist_tracks(username, rPlaylistID, fields="tracks,total,next", limit=100, offset=offset)
         tracks = tracks + results['tracks']
         offset = offset + 100
         next = results['next']
